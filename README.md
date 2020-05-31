@@ -104,3 +104,13 @@ Besides defining the transmission tags, you also need to add the gazebo ros cont
 # Creating a Controller
 1. Terminal #1
     catkin_create_pkg my_controller roscpp pluginlib controller_interface hardware_interface
+2. Inside your package, create a new file named controller_plugins.xml
+3. Updating the package.xml file
+4. Updating the CMakeLists.txt file
+5. catkin_make
+6. Terminal #2
+    rospack plugins --attrib=plugin controller_interface
+
+    rospack plugins --attrib=plugin controller_interface | grep my_controller
+7. Create config folder and the create my_controller.yaml inside the config folder
+8. Create lanch folder and the then create my_controller.launch
